@@ -1,0 +1,17 @@
+{% extends 'car/main.html' %}
+{% load static %}
+{% block content %}
+<h1>Car details</h1>
+<div class="container">
+    {% comment %} {% for cars in car %} {% endcomment %}
+    <div>
+        {{car.id}},
+        {{car.name}},
+        {{car.brand}},
+        {{car.price}},
+        {{car.customer}}
+
+    </div>
+    {% comment %} {% endfor %} {% endcomment %}
+</div>
+{% endblock content %}

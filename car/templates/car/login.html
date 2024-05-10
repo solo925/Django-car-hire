@@ -1,0 +1,11 @@
+{% extends 'car/main.html' %}
+{% load static %}
+{% block content %}
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class = "btn btn-primary" type="submit">Login</button>
+</form>
+<P>dont`t have an account?<a href="{% url 'register' %}">Register</a></P>
+{% endblock content %}
